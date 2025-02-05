@@ -1,0 +1,83 @@
+/* Styling for copy icons */
+.copy-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    transition: color 0.2s ease;
+}
+
+.copy-icon:hover {
+    color: #007bff; /* Bootstrap primary color for hover */
+}
+
+.copy-icon:active {
+    color: green; /* Temporary color change when clicked */
+}
+
+/* Other styles */
+#alert {
+    display: none;
+}
+
+img {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.btn-sm {
+    font-size: 0.875rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* New styles for Home, About, and Contact sections */
+.section-content {
+    padding: 2rem 0;
+}
+
+.social-links a {
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.list-group-item {
+    border: none;
+    padding: 0.75rem 1.25rem;
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn-outline-danger, .btn-outline-primary, .btn-outline-info, .btn-outline-dark, .btn-outline-warning {
+    border-width: 2px;
+}
+
+/* Add some responsive padding */
+@media (max-width: 768px) {
+    .section-content {
+        padding: 1rem 0;
+    }
+}
