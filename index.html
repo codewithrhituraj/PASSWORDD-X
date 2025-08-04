@@ -2,134 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PassX - Your Personal Password Manager</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PassX - Your Personal Password Manager</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">PassX</a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#" id="homeLink">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" id="aboutLink">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" id="contactLink">Contact</a></li>
-            </ul>
+  <!-- Animated SVG Wave Background -->
+  <div class="footer-wave"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark glass-card">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*4wyVRZoCo_SDE9YU.png"
+             alt="PassX Logo"
+             class="brand-logo"/>
+        PassX
+      </a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link nav-hover" href="#" id="homeLink">Home</a></li>
+        <li class="nav-item"><a class="nav-link nav-hover" href="#" id="aboutLink">About</a></li>
+        <li class="nav-item"><a class="nav-link nav-hover" href="#" id="contactLink">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container my-5 position-relative">
+    <!-- Password Manager Section -->
+    <div id="passwordManagerSection" class="glass-form fade-in">
+      <h1 class="text-center mb-3 glow-text">Password Manager</h1>
+      <p class="lead text-center">Easily manage your passwords and keep them secure.</p>
+
+      <h2 class="mt-4">Your Passwords <span id="alert" class="text-success">(Copied!)</span></h2>
+      <div class="table-responsive neumorphic-card pulse">
+        <table class="table table-borderless mb-0">
+          <thead>
+            <tr>
+              <th>Website</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <h2 class="mt-5">Add a Password</h2>
+      <form id="passwordForm" class="glass-form-inner shake-on-hover">
+        <div class="form-group">
+          <label for="website">Website:</label>
+          <input type="text" id="website" class="form-control glowing-input" placeholder="https://example.com" required/>
         </div>
-    </nav>
-
-    <div class="container my-4" id="content">
-        <div id="passwordManagerSection">
-            <h1 class="text-center">Password Manager</h1>
-            <p class="lead text-center">Easily manage your passwords and keep them secure.</p>
-
-            <h2 class="mt-4">Your Passwords <span id="alert" class="text-success">(Copied!)</span></h2>
-
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Website</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-
-            <h2 class="mt-4">Add a Password</h2>
-            <form id="passwordForm">
-                <div class="form-group">
-                    <label for="website">Website:</label>
-                    <input type="text" id="website" class="form-control" name="website" placeholder="e.g., https://example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" class="form-control" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" class="form-control" name="password" required>
-                </div>
-                <button class="btn btn-dark" type="submit">Submit</button>
-            </form>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" class="form-control glowing-input" required/>
         </div>
-
-        <div id="homeSection" class="section-content" style="display: none;">
-            <h2 class="text-center mb-4">Welcome to PassX</h2>
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <p class="lead text-center">PassX is a secure password manager created by Mr. Rhituraj.</p>
-                    <div class="text-center mt-4">
-                        <h4>Connect with Rhituraj:</h4>
-                        <div class="social-links mt-3">
-                            <a href="https://www.linkedin.com/in/rhituraj-datta-1ba067272/" target="_blank" class="btn btn-outline-primary mr-2">LinkedIn</a>
-                            <a href="https://www.instagram.com/_rhituraj_22_/?hl=en" target="_blank" class="btn btn-outline-danger mr-2">Instagram</a>
-                            <a href="https://www.facebook.com/rhituraj.datta/" target="_blank" class="btn btn-outline-info">Facebook</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" class="form-control glowing-input" required/>
         </div>
-
-        <div id="aboutSection" class="section-content" style="display: none;">
-            <h2 class="text-center mb-4">About Rhituraj</h2>
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="lead">Rhituraj is a passionate developer dedicated to creating efficient and secure solutions.</p>
-                            <ul class="list-group list-group-flush mt-3">
-                                <li class="list-group-item">Solved over 350+ coding questions</li>
-                                <li class="list-group-item">Expertise in web development and security</li>
-                                <li class="list-group-item">Committed to continuous learning and improvement</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="contactSection" class="section-content" style="display: none;">
-            <h2 class="text-center mb-4">Contact Information</h2>
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fas fa-phone mr-2"></i>Phone: 8927635074</li>
-                                <li class="list-group-item"><i class="fas fa-envelope mr-2"></i>Email: drhituraj@gmail.com</li>
-                            </ul>
-                            <div class="mt-4">
-                                <h5 class="text-center">Connect on Social Media</h5>
-                                <div class="d-flex justify-content-center mt-3">
-                                    <a href="https://www.instagram.com/_rhituraj_22_/?hl=en" target="_blank" class="btn btn-outline-danger mr-2">Instagram</a>
-                                    <a href="https://www.linkedin.com/in/rhituraj-datta-1ba067272/" target="_blank" class="btn btn-outline-primary mr-2">LinkedIn</a>
-                                    <a href="https://www.facebook.com/rhituraj.datta/" target="_blank" class="btn btn-outline-info mr-2">Facebook</a>
-                                    <a href="https://github.com/codewithrhituraj" target="_blank" class="btn btn-outline-dark mr-2">GitHub</a>
-                                    <a href="https://leetcode.com/u/rhituraj_22_/" target="_blank" class="btn btn-outline-warning">LeetCode</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <button class="btn neumorphic-btn btn-block mt-3 btn-hover" type="submit">Submit</button>
+      </form>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-</body>
+    <!-- Home Section -->
+    <div id="homeSection" class="section-content glass-card fade-in" style="display:none;">
+      <h2 class="text-center mb-4 glow-text">Welcome to PassX</h2>
+      <p class="lead text-center">PassX is a secure password manager created by Mr. Rhituraj.</p>
+      <div class="text-center mt-4 social-links">
+        <a href="#" class="btn outline-btn btn-hover">LinkedIn</a>
+        <a href="#" class="btn outline-btn btn-hover">Instagram</a>
+        <a href="#" class="btn outline-btn btn-hover">Facebook</a>
+      </div>
+    </div>
 
+    <!-- About Section -->
+    <div id="aboutSection" class="section-content glass-card fade-in" style="display:none;">
+      <h2 class="text-center mb-4 glow-text">About Rhituraj</h2>
+      <div class="card neumorphic-card mx-auto bounce" style="max-width:600px;">
+        <div class="card-body">
+          <p class="lead">Rhituraj is a passionate developer dedicated to creating efficient and secure solutions.</p>
+          <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item">Solved over 500+ coding questions</li>
+            <li class="list-group-item">Expertise in web development and security</li>
+            <li class="list-group-item">Committed to continuous learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contactSection" class="section-content glass-card fade-in" style="display:none;">
+      <h2 class="text-center mb-4 glow-text">Contact Information</h2>
+      <div class="card neumorphic-card mx-auto swing" style="max-width:600px;">
+        <div class="card-body text-center">
+          <p><i class="fas fa-phone mr-2"></i>+91 8927635074</p>
+          <p><i class="fas fa-envelope mr-2"></i>drhituraj@gmail.com</p>
+          <div class="social-links mt-3">
+            <a href="#" class="btn outline-btn btn-hover">Instagram</a>
+            <a href="#" class="btn outline-btn btn-hover">LinkedIn</a>
+            <a href="#" class="btn outline-btn btn-hover">Facebook</a>
+            <a href="#" class="btn outline-btn btn-hover">GitHub</a>
+            <a href="#" class="btn outline-btn btn-hover">LeetCode</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS & dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
